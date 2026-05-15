@@ -1,0 +1,1243 @@
+options:
+  parameters:
+    author: ''
+    catch_exceptions: 'True'
+    category: '[GRC Hier Blocks]'
+    cmake_opt: ''
+    comment: ''
+    copyright: ''
+    description: ''
+    gen_cmake: 'On'
+    gen_linking: dynamic
+    generate_options: qt_gui
+    hier_block_src_path: '.:'
+    id: color_decoder_v2
+    max_nouts: '0'
+    output_language: python
+    placement: (0,0)
+    qt_qss_theme: ''
+    realtime_scheduling: ''
+    run: 'True'
+    run_command: '{python} -u {filename}'
+    run_options: prompt
+    sizing_mode: fixed
+    thread_safe_setters: ''
+    title: Not titled yet
+    window_size: (1000,1000)
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [8, 8]
+    rotation: 0
+    state: enabled
+
+blocks:
+- name: broj
+  id: variable_qtgui_range
+  parameters:
+    comment: ''
+    gui_hint: ''
+    label: ''
+    min_len: '200'
+    orient: QtCore.Qt.Horizontal
+    rangeType: float
+    start: '-300'
+    step: '1'
+    stop: '300'
+    value: '0'
+    widget: counter_slider
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1720, 32.0]
+    rotation: 0
+    state: enabled
+- name: color_Strength
+  id: variable_qtgui_range
+  parameters:
+    comment: ''
+    gui_hint: ''
+    label: ''
+    min_len: '200'
+    orient: QtCore.Qt.Horizontal
+    rangeType: float
+    start: '100'
+    step: '1'
+    stop: '3000'
+    value: '500'
+    widget: counter_slider
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1232, 8.0]
+    rotation: 0
+    state: enabled
+- name: filter_frequency
+  id: variable_qtgui_range
+  parameters:
+    comment: ''
+    gui_hint: ''
+    label: ''
+    min_len: '200'
+    orient: QtCore.Qt.Horizontal
+    rangeType: float
+    start: 5e5
+    step: '1'
+    stop: 3e6
+    value: 1e6
+    widget: counter_slider
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1392, 16.0]
+    rotation: 0
+    state: enabled
+- name: hue
+  id: variable_qtgui_range
+  parameters:
+    comment: ''
+    gui_hint: ''
+    label: hue
+    min_len: '200'
+    orient: QtCore.Qt.Horizontal
+    rangeType: float
+    start: '-3.14'
+    step: '0.05'
+    stop: '3.14'
+    value: '0'
+    widget: counter_slider
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [896, 16.0]
+    rotation: 0
+    state: enabled
+- name: line_length
+  id: variable
+  parameters:
+    comment: ''
+    value: '1024'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [376, 16.0]
+    rotation: 0
+    state: enabled
+- name: offset
+  id: variable_qtgui_range
+  parameters:
+    comment: ''
+    gui_hint: ''
+    label: ''
+    min_len: '200'
+    orient: QtCore.Qt.Horizontal
+    rangeType: float
+    start: '0'
+    step: '0.01'
+    stop: '100'
+    value: '0'
+    widget: counter_slider
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [624, 40.0]
+    rotation: 0
+    state: enabled
+- name: rangedb
+  id: variable_qtgui_range
+  parameters:
+    comment: ''
+    gui_hint: ''
+    label: rangedb
+    min_len: '200'
+    orient: QtCore.Qt.Horizontal
+    rangeType: float
+    start: '0'
+    step: '0.05'
+    stop: '120'
+    value: '20'
+    widget: counter_slider
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1008, 40.0]
+    rotation: 0
+    state: enabled
+- name: rangee
+  id: variable_qtgui_range
+  parameters:
+    comment: ''
+    gui_hint: ''
+    label: contrast
+    min_len: '200'
+    orient: QtCore.Qt.Horizontal
+    rangeType: float
+    start: '-5'
+    step: '0.01'
+    stop: '5'
+    value: '1'
+    widget: counter_slider
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [480, 32.0]
+    rotation: 0
+    state: enabled
+- name: samp_rate
+  id: variable
+  parameters:
+    comment: ''
+    value: '40000000'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [200, 16.0]
+    rotation: 0
+    state: enabled
+- name: threshhold
+  id: variable_qtgui_range
+  parameters:
+    comment: ''
+    gui_hint: ''
+    label: threshold
+    min_len: '200'
+    orient: QtCore.Qt.Horizontal
+    rangeType: float
+    start: '-300'
+    step: '0.05'
+    stop: '-30'
+    value: '-60'
+    widget: counter_slider
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1568, 0.0]
+    rotation: 0
+    state: enabled
+- name: analog_quadrature_demod_cf_0
+  id: analog_quadrature_demod_cf
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    gain: rangee
+    maxoutbuf: '0'
+    minoutbuf: '0'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [280, 304.0]
+    rotation: 0
+    state: disabled
+- name: analog_quadrature_demod_cf_0_0
+  id: analog_quadrature_demod_cf
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    gain: rangee
+    maxoutbuf: '0'
+    minoutbuf: '0'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [352, 440.0]
+    rotation: 0
+    state: enabled
+- name: analog_rail_ff_0
+  id: analog_rail_ff
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    hi: '1'
+    lo: '-1'
+    maxoutbuf: '0'
+    minoutbuf: '0'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [872, 536.0]
+    rotation: 0
+    state: enabled
+- name: analog_sig_source_x_0
+  id: analog_sig_source_x
+  parameters:
+    affinity: ''
+    alias: ''
+    amp: '1'
+    comment: ''
+    freq: -4.433618e6
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    offset: '0'
+    phase: '0'
+    samp_rate: samp_rate*0.4
+    showports: 'False'
+    type: complex
+    waveform: analog.GR_COS_WAVE
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [784, 376.0]
+    rotation: 0
+    state: enabled
+- name: band_pass_filter_1
+  id: band_pass_filter
+  parameters:
+    affinity: ''
+    alias: ''
+    beta: '6.76'
+    comment: ''
+    decim: '1'
+    gain: '1'
+    high_cutoff_freq: 5e6
+    interp: '1'
+    low_cutoff_freq: 3.5e6
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    samp_rate: samp_rate*0.4
+    type: interp_fir_filter_fcc
+    width: 5e5
+    win: window.WIN_HAMMING
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [640, 248.0]
+    rotation: 0
+    state: enabled
+- name: band_reject_filter_0
+  id: band_reject_filter
+  parameters:
+    affinity: ''
+    alias: ''
+    beta: '6.76'
+    comment: ''
+    decim: '1'
+    gain: '1'
+    high_cutoff_freq: 4.8e6
+    interp: '1'
+    low_cutoff_freq: 4.1e6
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    samp_rate: samp_rate*0.4
+    type: fir_filter_fff
+    width: 2e5
+    win: window.WIN_HAMMING
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [640, 444.0]
+    rotation: 0
+    state: enabled
+- name: blocks_add_const_vxx_0
+  id: blocks_add_const_vxx
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    const: '0.3'
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    type: float
+    vlen: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1096, 680.0]
+    rotation: 0
+    state: enabled
+- name: blocks_add_const_vxx_1
+  id: blocks_add_const_vxx
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    const: broj
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    type: float
+    vlen: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [448, 800.0]
+    rotation: 0
+    state: enabled
+- name: blocks_file_sink_0
+  id: blocks_file_sink
+  parameters:
+    affinity: ''
+    alias: ''
+    append: 'False'
+    comment: ''
+    file: C:\Users\mirko\Downloads\test_file_output
+    type: byte
+    unbuffered: 'False'
+    vlen: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1232, 896.0]
+    rotation: 0
+    state: enabled
+- name: blocks_file_source_0
+  id: blocks_file_source
+  parameters:
+    affinity: ''
+    alias: ''
+    begin_tag: pmt.PMT_NIL
+    comment: ''
+    file: /home/orqa-internship/Downloads/pokusaj_1
+    length: '0'
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    offset: '0'
+    repeat: 'True'
+    type: complex
+    vlen: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [8, 264.0]
+    rotation: 0
+    state: disabled
+- name: blocks_multiply_const_vxx_0
+  id: blocks_multiply_const_vxx
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    const: '180'
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    type: float
+    vlen: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1264, 688.0]
+    rotation: 0
+    state: enabled
+- name: blocks_multiply_xx_0
+  id: blocks_multiply_xx
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    num_inputs: '2'
+    type: complex
+    vlen: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [992, 296.0]
+    rotation: 0
+    state: enabled
+- name: blocks_throttle2_0
+  id: blocks_throttle2
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    ignoretag: 'True'
+    limit: auto
+    maximum: '0.1'
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    samples_per_second: samp_rate
+    type: complex
+    vlen: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [192, 208.0]
+    rotation: 0
+    state: disabled
+- name: epy_block_0
+  id: epy_block
+  parameters:
+    _source_code: "import numpy as np\nfrom gnuradio import gr\n\nclass blk(gr.basic_block):\n\
+      \    LINE_LEN        = 1024\n    LINES_PER_FIELD = 312\n    ACTIVE_LINES   \
+      \ = 288\n    ACTIVE_LEN      = 832\n    ACTIVE_START    = 180\n    VBI_TOP_LINES\
+      \   = 20\n\n    BROAD_MIN_WIDTH = 300\n    HSYNC_MIN_WIDTH = 50\n    HSYNC_MAX_WIDTH\
+      \ = 120\n\n    FRAME_SIZE = 2 * ACTIVE_LINES * ACTIVE_LEN\n\n    def __init__(self,\
+      \ threshold=-60.0):\n        gr.basic_block.__init__(\n            self, name=\"\
+      pal_sync_color\",\n            in_sig=[np.float32, np.complex64],  # Changed\
+      \ to 2 inputs (Y float, Chroma complex)\n            out_sig=[np.float32, np.float32,\
+      \ np.float32])\n        self.threshold = float(threshold)\n        self._held\
+      \ = None\n        self._held_parity = None\n        self._min_input = (self.LINES_PER_FIELD\
+      \ + 3) * self.LINE_LEN\n        self.set_output_multiple(self.FRAME_SIZE)\n\n\
+      \    def forecast(self, noutput_items, ninput_items_required):\n        n_frames\
+      \ = max(1, noutput_items // self.FRAME_SIZE)\n        n_needed = n_frames *\
+      \ self._min_input\n        try:\n            for i in range(2): # Changed for\
+      \ 2 inputs\n                ninput_items_required[i] = n_needed\n          \
+      \  return\n        except TypeError:\n            return [n_needed, n_needed]\n\
+      \n    def _find_pulses(self, sig):\n        below = (sig < self.threshold).astype(np.int8)\n\
+      \        edges = np.diff(below)\n        falls = np.where(edges ==  1)[0] +\
+      \ 1\n        rises = np.where(edges == -1)[0] + 1\n        if falls.size ==\
+      \ 0 or rises.size == 0:\n            return np.empty(0, np.int32), np.empty(0,\
+      \ np.int32)\n        rises = rises[rises > falls[0]]\n        n = min(falls.size,\
+      \ rises.size)\n        return falls[:n].astype(np.int32), (rises[:n] - falls[:n]).astype(np.int32)\n\
+      \n    def _find_vsync_block(self, starts, widths):\n        broad = np.where(widths\
+      \ >= self.BROAD_MIN_WIDTH)[0]\n        if broad.size < 2:\n            return\
+      \ -1, np.empty(0, np.int32)\n        i = 0\n        while i < broad.size:\n\
+      \            j = i\n            while (j + 1 < broad.size and\n            \
+      \       starts[broad[j + 1]] - starts[broad[j]] < 2 * self.LINE_LEN):\n    \
+      \            j += 1\n            if j > i:\n                cluster = broad[i:j+1]\n\
+      \                vs_end = int(starts[broad[j]] + widths[broad[j]])\n       \
+      \         return vs_end, starts[cluster]\n            i = j + 1\n        return\
+      \ -1, np.empty(0, np.int32)\n\n    def _detect_parity(self, broad_starts, h0):\n\
+      \        if broad_starts.size == 0:\n            return 0\n        delta = (h0\
+      \ - int(broad_starts[0])) % self.LINE_LEN\n        aligned = min(delta, self.LINE_LEN\
+      \ - delta)\n        offset  = abs(delta - self.LINE_LEN // 2)\n        return\
+      \ 0 if aligned < offset else 1\n\n    def general_work(self, input_items, output_items):\n\
+      \        y, c = input_items[0], input_items[1]\n        y_o, u_o, v_o = output_items[0],\
+      \ output_items[1], output_items[2]\n\n        n_min = min(y.size, c.size)\n\
+      \        out_min = min(y_o.size, u_o.size, v_o.size)\n        if n_min < self._min_input\
+      \ or out_min < self.FRAME_SIZE:\n            return 0\n\n        fallback =\
+      \ self.LINES_PER_FIELD * self.LINE_LEN\n\n        starts, widths = self._find_pulses(y)\n\
+      \        if starts.size < 5:\n            self._held = None\n            for\
+      \ i in range(2): self.consume(i, fallback)\n            return 0\n\n       \
+      \ vs_end, broad_starts = self._find_vsync_block(starts, widths)\n        if\
+      \ vs_end < 0:\n            self._held = None\n            for i in range(2):\
+      \ self.consume(i, fallback)\n            return 0\n\n        is_hsync = ((widths\
+      \ >= self.HSYNC_MIN_WIDTH) &\n                    (widths <= self.HSYNC_MAX_WIDTH)\
+      \ &\n                    (starts >= vs_end + 3 * self.LINE_LEN))\n        idx\
+      \ = np.where(is_hsync)[0]\n        if idx.size == 0:\n            self._held\
+      \ = None\n            for i in range(2): self.consume(i, fallback)\n       \
+      \     return 0\n\n        h0 = int(starts[idx[0]])\n        parity = self._detect_parity(broad_starts,\
+      \ h0)\n\n        first_line = h0 + (self.VBI_TOP_LINES - 1) * self.LINE_LEN\n\
+      \        last_line  = first_line + (self.ACTIVE_LINES - 1) * self.LINE_LEN\n\
+      \        end_y = last_line + self.ACTIVE_START + self.ACTIVE_LEN\n        if\
+      \ end_y > n_min:\n            return 0\n\n        hs_all = starts[(widths >=\
+      \ self.HSYNC_MIN_WIDTH) &\n                        (widths <= self.HSYNC_MAX_WIDTH)]\n\
+      \        tol = self.LINE_LEN // 8\n        line_starts = first_line + np.arange(self.ACTIVE_LINES)\
+      \ * self.LINE_LEN\n        if hs_all.size:\n            for k in range(self.ACTIVE_LINES):\n\
+      \                est = line_starts[k]\n                cand = hs_all[(hs_all\
+      \ >= est - tol) & (hs_all <= est + tol)]\n                if cand.size:\n  \
+      \                  line_starts[k] = cand[np.argmin(np.abs(cand - est))]\n\n\
+      \        # --- BURST PHASE ESTIMATOR & PAL COMB FILTER ---\n        # 1. Extract\
+      \ the Color burst for every line\n        burst_idx = np.clip(line_starts[:,\
+      \ None] + np.arange(int(5.5 * 16), int(7.8 * 16)), 0, n_min - 1)\n        bursts\
+      \ = np.mean(c[burst_idx], axis=1)\n\n        # 2. Add the previous line's burst\
+      \ to the current line. \n        # PAL bursts swing +45 and -45 degrees. Adding\
+      \ them cancels the swing, revealing the absolute phase!\n        bursts_prev\
+      \ = np.roll(bursts, 1)\n        bursts_prev[0] = bursts[0] \n        \n    \
+      \    # Calculate mathematical phase error for the line\n        phase_corr =\
+      \ np.angle(bursts + bursts_prev) - np.pi\n        \n        # 3. Rotate burst\
+      \ to determine if this is a +V or -V line (PAL switch)\n        rotated_bursts\
+      \ = bursts * np.exp(-1j * phase_corr)\n        v_mult = np.where(np.imag(rotated_bursts)\
+      \ > 0, 1.0, -1.0)\n\n        # 4. Extract active video data\n        s_y = line_starts\
+      \ + self.ACTIVE_START\n        col = np.arange(self.ACTIVE_LEN)\n        idx2d\
+      \ = s_y[:, None] + col[None, :]\n\n        y_f = y[idx2d]\n        c_f = c[idx2d]\n\
+      \n        # 5. Apply the perfect phase correction to the entire active line\n\
+      \        c_f_corrected = c_f * np.exp(-1j * phase_corr[:, None])\n        \n\
+      \        # Split complex data cleanly into U and V\n        u_f = np.real(c_f_corrected)\n\
+      \        v_f = np.imag(c_f_corrected) * v_mult[:, None]\n\n        consumed\
+      \ = min(h0 + (self.LINES_PER_FIELD - 6) * self.LINE_LEN, n_min)\n\n        if\
+      \ self._held is None:\n            self._held = (y_f, u_f, v_f)\n          \
+      \  self._held_parity = parity\n            for i in range(2): self.consume(i,\
+      \ consumed)\n            return 0\n\n        cur = (y_f, u_f, v_f)\n       \
+      \ if self._held_parity == 0:\n            field_a, field_b = self._held, cur\n\
+      \        else:\n            field_a, field_b = cur, self._held\n\n        for\
+      \ fa, fb, out in zip(field_a, field_b, (y_o, u_o, v_o)):\n            frame\
+      \ = np.empty((2 * self.ACTIVE_LINES, self.ACTIVE_LEN), dtype=np.float32)\n \
+      \           frame[0::2] = fa\n            frame[1::2] = fb\n            out[:frame.size]\
+      \ = frame.ravel()\n\n        self._held = None\n        self._held_parity =\
+      \ None\n        for i in range(2): self.consume(i, consumed)\n        return\
+      \ self.FRAME_SIZE"
+    affinity: ''
+    alias: ''
+    comment: ''
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    threshold: threshhold
+  states:
+    _io_cache: ('pal_sync_color', 'blk', [('threshold', '-60.0')], [('0', 'float',
+      1), ('1', 'complex', 1)], [('0', 'float', 1), ('1', 'float', 1), ('2', 'float',
+      1)], '', ['threshold'])
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [592, 792.0]
+    rotation: 0
+    state: enabled
+- name: epy_block_0_0
+  id: epy_block
+  parameters:
+    _source_code: "\"\"\"\nPer-sample YUV -> packed RGB24.\nin0 Y (0..255), in1 U\
+      \ (~+/-0.2), in2 V (~+/-0.2)\nout: uint8, 3 bytes per Y sample (R,G,B)\n\"\"\
+      \"\n\nimport numpy as np\nfrom gnuradio import gr\n\n\nclass blk(gr.interp_block):\n\
+      \    def __init__(self, u_gain=500.0, v_gain=500.0):\n        gr.interp_block.__init__(\n\
+      \            self, name='yuv_to_rgb',\n            in_sig=[np.float32, np.float32,\
+      \ np.float32],\n            out_sig=[np.uint8],\n            interp=3)\n   \
+      \     self.u_gain = float(u_gain)\n        self.v_gain = float(v_gain)\n   \
+      \     # 832*576*3 = 1437696 output bytes per frame\n        self.set_output_multiple(832\
+      \ * 576 * 3)\n\n    def work(self, input_items, output_items):\n        y =\
+      \ input_items[0]\n        u = input_items[1] * self.u_gain\n        v = input_items[2]\
+      \ * self.v_gain\n        out = output_items[0]\n        n = len(y)\n\n     \
+      \   r = y + 1.140 * v\n        g = y - 0.395 * u - 0.581 * v\n        b = y\
+      \ + 2.032 * u\n\n        rgb = np.empty(n * 3, dtype=np.uint8)\n        rgb[0::3]\
+      \ = np.clip(r, 0, 255).astype(np.uint8)\n        rgb[1::3] = np.clip(g, 0, 255).astype(np.uint8)\n\
+      \        rgb[2::3] = np.clip(b, 0, 255).astype(np.uint8)\n        out[:n * 3]\
+      \ = rgb\n        return n * 3"
+    affinity: ''
+    alias: ''
+    comment: ''
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    u_gain: color_Strength
+    v_gain: color_Strength
+  states:
+    _io_cache: ('yuv_to_rgb', 'blk', [('u_gain', '500.0'), ('v_gain', '500.0')], [('0',
+      'float', 1), ('1', 'float', 1), ('2', 'float', 1)], [('0', 'byte', 1)], '',
+      ['u_gain', 'v_gain'])
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [968, 792.0]
+    rotation: 0
+    state: enabled
+- name: import_0
+  id: import
+  parameters:
+    alias: ''
+    comment: ''
+    imports: import cmath
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1144, 112.0]
+    rotation: 0
+    state: enabled
+- name: low_pass_filter_0
+  id: low_pass_filter
+  parameters:
+    affinity: ''
+    alias: ''
+    beta: '6.76'
+    comment: ''
+    cutoff_freq: filter_frequency
+    decim: '1'
+    gain: '1'
+    interp: '1'
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    samp_rate: samp_rate*0.4
+    type: fir_filter_ccf
+    width: 400e3
+    win: window.WIN_HAMMING
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1160, 236.0]
+    rotation: 0
+    state: enabled
+- name: network_tcp_sink_0
+  id: network_tcp_sink
+  parameters:
+    addr: 127.0.0.1
+    affinity: ''
+    alias: ''
+    comment: ''
+    mode: '2'
+    port: '2000'
+    type: byte
+    vlen: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1224, 800.0]
+    rotation: 0
+    state: enabled
+- name: pfb_arb_resampler_xxx_0
+  id: pfb_arb_resampler_xxx
+  parameters:
+    affinity: ''
+    alias: ''
+    atten: '100'
+    comment: ''
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    nfilts: '32'
+    rrate: '0.4'
+    samp_delay: '0'
+    taps: ''
+    type: fff
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [392, 192.0]
+    rotation: 0
+    state: disabled
+- name: snippet_0
+  id: snippet
+  parameters:
+    alias: ''
+    code: "import time\nimport threading\nimport subprocess  # <--- Added this line\n\
+      \ndef launch_ffplay():\n    time.sleep(2) # let GR's TCP server come up first\n\
+      \    cmd = [\n        \"ffplay\",\n        \"-f\", \"rawvideo\",\n        \"\
+      -pixel_format\", \"rgb24\",\n        \"-video_size\", \"832x576\",\n       \
+      \ \"-framerate\", \"25\",\n        \"-i\", \"tcp://127.0.0.1:2000\",\n    ]\n\
+      \    try:\n        # Removed the Windows-only creationflags argument\n     \
+      \   subprocess.Popen(cmd) \n    except Exception as e:\n        print(f\"ERROR:\
+      \ {e}\")\n\nthreading.Thread(target=launch_ffplay, daemon=True).start()"
+    comment: ''
+    priority: '0'
+    section: main_after_init
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [272, 688.0]
+    rotation: 0
+    state: enabled
+- name: uhd_usrp_source_0
+  id: uhd_usrp_source
+  parameters:
+    affinity: ''
+    alias: ''
+    ant0: '"RX2"'
+    ant1: '"RX2"'
+    ant10: '"RX2"'
+    ant11: '"RX2"'
+    ant12: '"RX2"'
+    ant13: '"RX2"'
+    ant14: '"RX2"'
+    ant15: '"RX2"'
+    ant16: '"RX2"'
+    ant17: '"RX2"'
+    ant18: '"RX2"'
+    ant19: '"RX2"'
+    ant2: '"RX2"'
+    ant20: '"RX2"'
+    ant21: '"RX2"'
+    ant22: '"RX2"'
+    ant23: '"RX2"'
+    ant24: '"RX2"'
+    ant25: '"RX2"'
+    ant26: '"RX2"'
+    ant27: '"RX2"'
+    ant28: '"RX2"'
+    ant29: '"RX2"'
+    ant3: '"RX2"'
+    ant30: '"RX2"'
+    ant31: '"RX2"'
+    ant4: '"RX2"'
+    ant5: '"RX2"'
+    ant6: '"RX2"'
+    ant7: '"RX2"'
+    ant8: '"RX2"'
+    ant9: '"RX2"'
+    bw0: '0'
+    bw1: '0'
+    bw10: '0'
+    bw11: '0'
+    bw12: '0'
+    bw13: '0'
+    bw14: '0'
+    bw15: '0'
+    bw16: '0'
+    bw17: '0'
+    bw18: '0'
+    bw19: '0'
+    bw2: '0'
+    bw20: '0'
+    bw21: '0'
+    bw22: '0'
+    bw23: '0'
+    bw24: '0'
+    bw25: '0'
+    bw26: '0'
+    bw27: '0'
+    bw28: '0'
+    bw29: '0'
+    bw3: '0'
+    bw30: '0'
+    bw31: '0'
+    bw4: '0'
+    bw5: '0'
+    bw6: '0'
+    bw7: '0'
+    bw8: '0'
+    bw9: '0'
+    center_freq0: 5.917e9
+    center_freq1: '0'
+    center_freq10: '0'
+    center_freq11: '0'
+    center_freq12: '0'
+    center_freq13: '0'
+    center_freq14: '0'
+    center_freq15: '0'
+    center_freq16: '0'
+    center_freq17: '0'
+    center_freq18: '0'
+    center_freq19: '0'
+    center_freq2: '0'
+    center_freq20: '0'
+    center_freq21: '0'
+    center_freq22: '0'
+    center_freq23: '0'
+    center_freq24: '0'
+    center_freq25: '0'
+    center_freq26: '0'
+    center_freq27: '0'
+    center_freq28: '0'
+    center_freq29: '0'
+    center_freq3: '0'
+    center_freq30: '0'
+    center_freq31: '0'
+    center_freq4: '0'
+    center_freq5: '0'
+    center_freq6: '0'
+    center_freq7: '0'
+    center_freq8: '0'
+    center_freq9: '0'
+    clock_rate: 0e0
+    clock_source0: ''
+    clock_source1: ''
+    clock_source2: ''
+    clock_source3: ''
+    clock_source4: ''
+    clock_source5: ''
+    clock_source6: ''
+    clock_source7: ''
+    comment: ''
+    dc_offs0: 0+0j
+    dc_offs1: 0+0j
+    dc_offs10: 0+0j
+    dc_offs11: 0+0j
+    dc_offs12: 0+0j
+    dc_offs13: 0+0j
+    dc_offs14: 0+0j
+    dc_offs15: 0+0j
+    dc_offs16: 0+0j
+    dc_offs17: 0+0j
+    dc_offs18: 0+0j
+    dc_offs19: 0+0j
+    dc_offs2: 0+0j
+    dc_offs20: 0+0j
+    dc_offs21: 0+0j
+    dc_offs22: 0+0j
+    dc_offs23: 0+0j
+    dc_offs24: 0+0j
+    dc_offs25: 0+0j
+    dc_offs26: 0+0j
+    dc_offs27: 0+0j
+    dc_offs28: 0+0j
+    dc_offs29: 0+0j
+    dc_offs3: 0+0j
+    dc_offs30: 0+0j
+    dc_offs31: 0+0j
+    dc_offs4: 0+0j
+    dc_offs5: 0+0j
+    dc_offs6: 0+0j
+    dc_offs7: 0+0j
+    dc_offs8: 0+0j
+    dc_offs9: 0+0j
+    dc_offs_enb0: auto
+    dc_offs_enb1: default
+    dc_offs_enb10: default
+    dc_offs_enb11: default
+    dc_offs_enb12: default
+    dc_offs_enb13: default
+    dc_offs_enb14: default
+    dc_offs_enb15: default
+    dc_offs_enb16: default
+    dc_offs_enb17: default
+    dc_offs_enb18: default
+    dc_offs_enb19: default
+    dc_offs_enb2: default
+    dc_offs_enb20: default
+    dc_offs_enb21: default
+    dc_offs_enb22: default
+    dc_offs_enb23: default
+    dc_offs_enb24: default
+    dc_offs_enb25: default
+    dc_offs_enb26: default
+    dc_offs_enb27: default
+    dc_offs_enb28: default
+    dc_offs_enb29: default
+    dc_offs_enb3: default
+    dc_offs_enb30: default
+    dc_offs_enb31: default
+    dc_offs_enb4: default
+    dc_offs_enb5: default
+    dc_offs_enb6: default
+    dc_offs_enb7: default
+    dc_offs_enb8: default
+    dc_offs_enb9: default
+    dev_addr: type=b200
+    dev_args: ''
+    gain0: rangedb
+    gain1: '0'
+    gain10: '0'
+    gain11: '0'
+    gain12: '0'
+    gain13: '0'
+    gain14: '0'
+    gain15: '0'
+    gain16: '0'
+    gain17: '0'
+    gain18: '0'
+    gain19: '0'
+    gain2: '0'
+    gain20: '0'
+    gain21: '0'
+    gain22: '0'
+    gain23: '0'
+    gain24: '0'
+    gain25: '0'
+    gain26: '0'
+    gain27: '0'
+    gain28: '0'
+    gain29: '0'
+    gain3: '0'
+    gain30: '0'
+    gain31: '0'
+    gain4: '0'
+    gain5: '0'
+    gain6: '0'
+    gain7: '0'
+    gain8: '0'
+    gain9: '0'
+    gain_type0: default
+    gain_type1: default
+    gain_type10: default
+    gain_type11: default
+    gain_type12: default
+    gain_type13: default
+    gain_type14: default
+    gain_type15: default
+    gain_type16: default
+    gain_type17: default
+    gain_type18: default
+    gain_type19: default
+    gain_type2: default
+    gain_type20: default
+    gain_type21: default
+    gain_type22: default
+    gain_type23: default
+    gain_type24: default
+    gain_type25: default
+    gain_type26: default
+    gain_type27: default
+    gain_type28: default
+    gain_type29: default
+    gain_type3: default
+    gain_type30: default
+    gain_type31: default
+    gain_type4: default
+    gain_type5: default
+    gain_type6: default
+    gain_type7: default
+    gain_type8: default
+    gain_type9: default
+    iq_imbal0: 0+0j
+    iq_imbal1: 0+0j
+    iq_imbal10: 0+0j
+    iq_imbal11: 0+0j
+    iq_imbal12: 0+0j
+    iq_imbal13: 0+0j
+    iq_imbal14: 0+0j
+    iq_imbal15: 0+0j
+    iq_imbal16: 0+0j
+    iq_imbal17: 0+0j
+    iq_imbal18: 0+0j
+    iq_imbal19: 0+0j
+    iq_imbal2: 0+0j
+    iq_imbal20: 0+0j
+    iq_imbal21: 0+0j
+    iq_imbal22: 0+0j
+    iq_imbal23: 0+0j
+    iq_imbal24: 0+0j
+    iq_imbal25: 0+0j
+    iq_imbal26: 0+0j
+    iq_imbal27: 0+0j
+    iq_imbal28: 0+0j
+    iq_imbal29: 0+0j
+    iq_imbal3: 0+0j
+    iq_imbal30: 0+0j
+    iq_imbal31: 0+0j
+    iq_imbal4: 0+0j
+    iq_imbal5: 0+0j
+    iq_imbal6: 0+0j
+    iq_imbal7: 0+0j
+    iq_imbal8: 0+0j
+    iq_imbal9: 0+0j
+    iq_imbal_enb0: auto
+    iq_imbal_enb1: default
+    iq_imbal_enb10: default
+    iq_imbal_enb11: default
+    iq_imbal_enb12: default
+    iq_imbal_enb13: default
+    iq_imbal_enb14: default
+    iq_imbal_enb15: default
+    iq_imbal_enb16: default
+    iq_imbal_enb17: default
+    iq_imbal_enb18: default
+    iq_imbal_enb19: default
+    iq_imbal_enb2: default
+    iq_imbal_enb20: default
+    iq_imbal_enb21: default
+    iq_imbal_enb22: default
+    iq_imbal_enb23: default
+    iq_imbal_enb24: default
+    iq_imbal_enb25: default
+    iq_imbal_enb26: default
+    iq_imbal_enb27: default
+    iq_imbal_enb28: default
+    iq_imbal_enb29: default
+    iq_imbal_enb3: default
+    iq_imbal_enb30: default
+    iq_imbal_enb31: default
+    iq_imbal_enb4: default
+    iq_imbal_enb5: default
+    iq_imbal_enb6: default
+    iq_imbal_enb7: default
+    iq_imbal_enb8: default
+    iq_imbal_enb9: default
+    lo_export0: 'False'
+    lo_export1: 'False'
+    lo_export10: 'False'
+    lo_export11: 'False'
+    lo_export12: 'False'
+    lo_export13: 'False'
+    lo_export14: 'False'
+    lo_export15: 'False'
+    lo_export16: 'False'
+    lo_export17: 'False'
+    lo_export18: 'False'
+    lo_export19: 'False'
+    lo_export2: 'False'
+    lo_export20: 'False'
+    lo_export21: 'False'
+    lo_export22: 'False'
+    lo_export23: 'False'
+    lo_export24: 'False'
+    lo_export25: 'False'
+    lo_export26: 'False'
+    lo_export27: 'False'
+    lo_export28: 'False'
+    lo_export29: 'False'
+    lo_export3: 'False'
+    lo_export30: 'False'
+    lo_export31: 'False'
+    lo_export4: 'False'
+    lo_export5: 'False'
+    lo_export6: 'False'
+    lo_export7: 'False'
+    lo_export8: 'False'
+    lo_export9: 'False'
+    lo_source0: internal
+    lo_source1: internal
+    lo_source10: internal
+    lo_source11: internal
+    lo_source12: internal
+    lo_source13: internal
+    lo_source14: internal
+    lo_source15: internal
+    lo_source16: internal
+    lo_source17: internal
+    lo_source18: internal
+    lo_source19: internal
+    lo_source2: internal
+    lo_source20: internal
+    lo_source21: internal
+    lo_source22: internal
+    lo_source23: internal
+    lo_source24: internal
+    lo_source25: internal
+    lo_source26: internal
+    lo_source27: internal
+    lo_source28: internal
+    lo_source29: internal
+    lo_source3: internal
+    lo_source30: internal
+    lo_source31: internal
+    lo_source4: internal
+    lo_source5: internal
+    lo_source6: internal
+    lo_source7: internal
+    lo_source8: internal
+    lo_source9: internal
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    nchan: '1'
+    num_mboards: '1'
+    otw: ''
+    rx_agc0: Default
+    rx_agc1: Default
+    rx_agc10: Default
+    rx_agc11: Default
+    rx_agc12: Default
+    rx_agc13: Default
+    rx_agc14: Default
+    rx_agc15: Default
+    rx_agc16: Default
+    rx_agc17: Default
+    rx_agc18: Default
+    rx_agc19: Default
+    rx_agc2: Default
+    rx_agc20: Default
+    rx_agc21: Default
+    rx_agc22: Default
+    rx_agc23: Default
+    rx_agc24: Default
+    rx_agc25: Default
+    rx_agc26: Default
+    rx_agc27: Default
+    rx_agc28: Default
+    rx_agc29: Default
+    rx_agc3: Default
+    rx_agc30: Default
+    rx_agc31: Default
+    rx_agc4: Default
+    rx_agc5: Default
+    rx_agc6: Default
+    rx_agc7: Default
+    rx_agc8: Default
+    rx_agc9: Default
+    samp_rate: '16000000'
+    sd_spec0: ''
+    sd_spec1: ''
+    sd_spec2: ''
+    sd_spec3: ''
+    sd_spec4: ''
+    sd_spec5: ''
+    sd_spec6: ''
+    sd_spec7: ''
+    show_lo_controls: 'False'
+    start_time: '-1.0'
+    stream_args: ''
+    stream_chans: '[]'
+    sync: none
+    time_source0: ''
+    time_source1: ''
+    time_source2: ''
+    time_source3: ''
+    time_source4: ''
+    time_source5: ''
+    time_source6: ''
+    time_source7: ''
+    type: fc32
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [72, 420.0]
+    rotation: 0
+    state: enabled
+- name: virtual_sink_0
+  id: virtual_sink
+  parameters:
+    alias: ''
+    comment: ''
+    stream_id: signal
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1624, 720.0]
+    rotation: 0
+    state: enabled
+- name: virtual_sink_1
+  id: virtual_sink
+  parameters:
+    alias: ''
+    comment: ''
+    stream_id: ''
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1760, 272.0]
+    rotation: 0
+    state: enabled
+- name: virtual_source_0
+  id: virtual_source
+  parameters:
+    alias: ''
+    comment: ''
+    stream_id: signal
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [200, 792.0]
+    rotation: 0
+    state: enabled
+- name: virtual_source_1
+  id: virtual_source
+  parameters:
+    alias: ''
+    comment: ''
+    stream_id: ''
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [328, 840.0]
+    rotation: 0
+    state: enabled
+
+connections:
+- [analog_quadrature_demod_cf_0, '0', pfb_arb_resampler_xxx_0, '0']
+- [analog_quadrature_demod_cf_0_0, '0', band_pass_filter_1, '0']
+- [analog_quadrature_demod_cf_0_0, '0', band_reject_filter_0, '0']
+- [analog_rail_ff_0, '0', blocks_add_const_vxx_0, '0']
+- [analog_sig_source_x_0, '0', blocks_multiply_xx_0, '1']
+- [band_pass_filter_1, '0', blocks_multiply_xx_0, '0']
+- [band_reject_filter_0, '0', analog_rail_ff_0, '0']
+- [blocks_add_const_vxx_0, '0', blocks_multiply_const_vxx_0, '0']
+- [blocks_add_const_vxx_1, '0', epy_block_0, '0']
+- [blocks_file_source_0, '0', blocks_throttle2_0, '0']
+- [blocks_multiply_const_vxx_0, '0', virtual_sink_0, '0']
+- [blocks_multiply_xx_0, '0', low_pass_filter_0, '0']
+- [blocks_throttle2_0, '0', analog_quadrature_demod_cf_0, '0']
+- [epy_block_0, '0', epy_block_0_0, '0']
+- [epy_block_0, '1', epy_block_0_0, '1']
+- [epy_block_0, '2', epy_block_0_0, '2']
+- [epy_block_0_0, '0', blocks_file_sink_0, '0']
+- [epy_block_0_0, '0', network_tcp_sink_0, '0']
+- [low_pass_filter_0, '0', virtual_sink_1, '0']
+- [pfb_arb_resampler_xxx_0, '0', band_pass_filter_1, '0']
+- [pfb_arb_resampler_xxx_0, '0', band_reject_filter_0, '0']
+- [uhd_usrp_source_0, '0', analog_quadrature_demod_cf_0_0, '0']
+- [virtual_source_0, '0', blocks_add_const_vxx_1, '0']
+- [virtual_source_1, '0', epy_block_0, '1']
+
+metadata:
+  file_format: 1
+  grc_version: 3.10.9.2
